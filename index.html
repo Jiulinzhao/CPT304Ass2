@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPT304 assessment 2 1929932_Jiulin Zhao</title>
+  <style>
+    /* CSS 样式 */
+    .header {
+      text-align: center;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    label {
+      display: inline-block;
+      width: 120px;
+      text-align: right;
+      margin-right: 10px;
+    }
+    input {
+      margin-bottom: 10px;
+    }
+    button {
+      margin-top: 10px;
+    }
+    #hotellist {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    pre {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid black;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Assessment 2</h1>
+  </div>
+
+  <div>
+    <label for="year">Year:</label>
+    <input type="text" id="year" name="year">
+    <br>
+    <label for="country">Country CODE:</label>
+    <input type="text" id="Countrycode" name="country">
+    <br>
+    <button type="button" onclick="getholiday()">Get Holiday List</button>
+  </div>
+
+  <div>
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city">
+    <br>
+    <button type="button" onclick="getweather()">Get Weather</button>
+
+    <form>
+      <form>
+        <label for="checkin">Check-in Date:</label>
+        <input type="date" id="checkin" name="checkin" value="2023-09-27">
+        <br>
+        <label for="checkout">Check-out Date:</label>
+        <input type="date" id="checkout" name="checkout" value="2023-09-28">
+        <br>
+        <button type="button" onclick="getHotelsWrapper()">Get hotel list</button>
+      </form>
+      <ul id="hotellist"></ul>
+  </div>
+
+  <pre id="holidaylist"> </pre>
+  <ul id="holiday-list"></ul>
+  <pre id="hotellist"></pre>
+  <pre id="weatherlist"> </pre>
+
+  <script src="getHoliday.js"></script>
+  <script src="getWeather.js"></script>
+  <script src="getHotel.js"></script>
+</body>
+</html>
